@@ -1,0 +1,30 @@
+{
+  "name": "auto-relay-tgqlv1-test",
+  "version": "1.0.0",
+  "description": "Simple example to test TypeGraphQL 1.0 with auto-relay",
+  "license": "MIT",
+  "engines": {
+    "node": "12.x.x"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "startDev": "NODE_ENV=development nodemon dist/server.js"
+  },
+  "dependencies": {
+    "@auto-relay/typeorm": "0.13.0-alpha.0",
+    "@types/express": "^4.17.8",
+    "apollo-server-express": "^2.19.0",
+    "auto-relay": "0.13.0-alpha.0",
+    "class-validator": "^0.12.2",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-relay": "^0.6.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^1.19.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0",
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.29",
+    "typescript": "^4.0.5"
+  }
+}
