@@ -12,8 +12,4 @@ export class Recipe {
   @Field()
   @Column()
   name: string;
-
-  @Field((type) => User)
-  @ManyToOne((type) => User, { nullable: true })
-  user?: User;
 }
