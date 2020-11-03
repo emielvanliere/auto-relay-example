@@ -6,10 +6,10 @@ import { TypeOrmConnection } from "@auto-relay/typeorm/lib/type-orm-connection";
 
 const bootstrap = async () => {
   const app = express();
+
   const apolloServer = await buildApolloServer();
   apolloServer.applyMiddleware({ app });
 
-  await Promise.resolve();
   new AutoRelayConfig({ orm: () => TypeOrmConnection });
 
   return app;

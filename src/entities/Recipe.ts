@@ -1,4 +1,3 @@
-import { RelayedConnection } from "auto-relay";
 import { Field, ObjectType } from "type-graphql";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { User } from "./User";
@@ -14,9 +13,7 @@ export class Recipe {
   @Column()
   name: string;
 
-  @ManyToOne(
-    (type) => User,
-    (u) => u.recipes
-  )
-  user: User;
+  @Field((type) => User)
+  @ManyToOne((type) => User, { nullable: true })
+  user?: User;
 }

@@ -15,11 +15,10 @@ export class User {
   @Column()
   name: string;
 
-  @OneToMany(
-    (type) => Recipe,
-    (r) => r.user
-  )
+  // @OneToMany(
+  //   (type) => Recipe,
+  //   (r) => r.user
+  // )
   @RelayedConnection(() => Recipe)
-  // @Field((type) => [Recipe])
-  recipes: Recipe[];
+  recipes!: Recipe[];
 }
